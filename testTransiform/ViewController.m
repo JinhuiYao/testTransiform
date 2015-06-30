@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *headIcon;
 
 @end
 
@@ -24,4 +25,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnUpClick{
+    self.headIcon.transform = CGAffineTransformTranslate(self.headIcon.transform, 0, 20);
+}
+
+- (IBAction)btnRotationClick{
+//    self.headIcon.transform = CGAffineTransformMakeRotation(M_PI);
+    self.headIcon.transform = CGAffineTransformRotate(self.headIcon.transform, M_PI_2);
+}
 @end
